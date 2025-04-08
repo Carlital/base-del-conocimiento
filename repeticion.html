@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LQ</title>
+    <link rel="stylesheet" href="view.css">
+    <link rel="stylesheet" href="secuencial.css">
+    <link rel="stylesheet" href="repeticion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="vista/logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <section class="tophead">
+            <header class="header">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html"><img width="80"></a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="ul">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="secuencial.html">Secuencial</a></li>
+                            <li><a href="alternativo.html">Alternativo</a></li>
+                            <li><a href="repeticion.html" id="repeticion">Repetición</a></li>
+                            <li><a href="otros.html">Otros</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+    </div>
+    <div class="main-content">
+        <section class="products-container">
+            <button class="product" type="button" data-ejercicio="ejercicio11">
+                <img src="Vista/repeticion11.jpg" alt="">
+                <div class="product-description">
+                    <h3>Números Propiedad Simétrica</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio12">
+                <img src="Vista/repeticion12.jpg" alt="">
+                <div class="product-description">
+                    <h3>Números con 4 divisores</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio13">
+                <img src="Vista/repeticion13.jpg" alt="">
+                <div class="product-description">
+                    <h3>Serie de Fibonacci</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio14">
+                <img src="Vista/repeticion14.jpg" alt="">
+                <div class="product-description">
+                    <h3>Leer cadenas de texto</h3>
+                </div>
+            </button>
+        </section>
+        <section class="ejercicios">
+            <div id="ejercicio11" class="ejercicio-form">
+                <form id="formEjercicio11">
+                    <h3>Números con propiedad de multiplicación simétrica:</h3>
+                    <p>Ejemplo 46 x 96 = 4416 <br>64 x 69 = 4416</p>
+                    <button type="submit">Mostrar</button>
+                </form>
+                <div id="resultado11"></div>
+            </div>
+            <div id="ejercicio12" class="ejercicio-form">
+                <form id="formEjercicio12">
+                    <h3>Números con condiciones</h3>
+                    <button type="submit">Mostrar</button>
+                </form>
+                <div id="resultado12"></div>
+            </div>
+            <div id="ejercicio13" class="ejercicio-form">
+                <h3>Serie de Fibonacci</h3>
+                <form id="formEjercicio13">
+                    <label for="elementoFibonacci">Número de elementos a generar:</label>
+                    <input type="text" id="elementoFibonacci" name="elementoFibonacci" pattern="([1-9]|[1-9]|20)" title="Ingrese un número válido entre 1 y 20">
+                    <button type="submit">Generar</button>
+                </form>
+                <div id="resultado13"></div>
+            </div>
+            <div id="ejercicio14" class="ejercicio-form">
+                <h3>Leer cadenas de texto</h3>
+                <form id="formEjercicio14">
+                    <label for="texto">Ingrese una cadena de texto:</label>
+                    <input type="text" id="texto">
+                    <button type="submit">Leer</button>
+                </form>
+                <div id="resultado14"></div>
+            </div>
+        </section>
+    </div>
+    <script src="repetitivo.js"></script>
+  <footer>
+    <div class="footer-columns">
+        <div style="display: flex;">
+            <div style="flex: 1; padding: 10px;">
+                <div class="info">
+                    <div class="logo1">
+                        <a href="index.html"><img  width="150"></a>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1; padding: 10px;">
+                <div class="email">
+                    <p>Contactos</p>
+                    <a href="ubicacion.html">
+                        <p>Río Coca y Río Paute K8. Riobamba - Ecuador.</p>
+                    </a>
+                    <p><span class="icon">&#x1F4E7;</span> carlitalomas13@gmail.com</p>
+                    <p><span class="icon">&#x260E;</span> +593 998603804 - +593 984876336</p>
+                </div>
+            </div>
+            <div style="flex: 1; padding: 10px;">
+            </div>
+        </div>
+    </div>
+  </footer>
+  </body>
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  project-id="skilful-sphere-456214-j4"
+  agent-id="0b6556e3-406f-4297-a54d-7ec20bbc26d1"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+    chat-title="boot2">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
+</html>

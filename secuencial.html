@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LQ</title>
+    <link rel="stylesheet" href="view.css">
+    <link rel="stylesheet" href="secuencial.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="vista/logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <section class="tophead">
+            <header class="header">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html"><img width="80"></a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="ul">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="secuencial.html" id="secuencial">Secuencial</a></li>
+                            <li><a href="alternativo.html">Alternativo</a></li>
+                            <li><a href="repeticion.html">Repetición</a></li>
+                            <li><a href="otros.html">Otros</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+    </div>
+    <div class="main-content">
+        <section class="products-container">
+            <button class="product" type="button" data-ejercicio="ejercicio1">
+                <img src="Vista/secuencial1.jpg" alt="">
+                <h3>Ángulo de incidencia del sol</h3>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio2">
+                <img src="Vista/secuencial2.jpg" alt="">
+                <h3>Área del triángulo</h3>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio3">
+                <img src="Vista/secuencial3.jpg" alt="">
+                <h3>Operaciones con números</h3>
+            
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio4">
+                <img src="Vista/secuencial4.jpg" alt="">
+                <h3>Salario neto</h3>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio5">
+                <img src="Vista/secuencial5.jpg" alt="">
+                <h3>Capital final con interés simple</h3>
+            </button>
+        </section>
+        <section class="ejercicios">
+            <div id="ejercicio1" class="ejercicio-form" style="display:none;">
+                <h3>Ángulo de incidencia del sol</h3>
+                <form id="formEjercicio1">
+                    <label for="altura">Altura del poste:</label>
+                    <input type="text" id="altura" name="altura" pattern="^(100(\.0+)?|[1-9]\d?(\.\d+)?)$" title="Ingrese un número válido entre 1 y 100">
+                    <label for="sombra">Largo de la sombra:</label>
+                    <input type="text" id="sombra" name="sombra" pattern="^(100(\.0+)?|[1-9]\d?(\.\d+)?)$" title="Ingrese un número válido entre 1 y 100">
+                    <button type="submit">Calcular</button>
+                </form>
+                <div id="resultado1"></div>
+            </div>
+            <div id="ejercicio2" class="ejercicio-form" style="display:none;">
+                <h3>Área del triángulo</h3>
+                <form id="formEjercicio2">
+                    <label for="lado1">Lado 1:</label>
+                    <input type="text" id="lado1" name="lado1" pattern="^([1-9]|[1-9][0-9]|100)$" title="Ingrese un número válido entre 1 y 100" min="1" max="100">
+                    <label for="lado2">Lado 2:</label>
+                    <input type="text" id="lado2" name="lado2" pattern="^([1-9]|[1-9][0-9]|100)$" title="Ingrese un número válido entre 1 y 100" min="1" max="100">
+                    <label for="lado3">Lado 3:</label>
+                    <input type="text" id="lado3" name="lado3" pattern="^([1-9]|[1-9][0-9]|100)$" title="Ingrese un número válido entre 1 y 100" min="1" max="100">
+                    <button type="submit">Calcular</button>
+                </form>
+                <div id="resultado2"></div>
+            </div>
+            <div id="ejercicio3" class="ejercicio-form" style="display:none;">
+                <h3>Operaciones con números</h3>
+                <form id="formEjercicio3">
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero" pattern="-?\b(100|[1-9]?[0-9])\b" title="Ingrese un número válido entre -100 y 100">
+                    <button type="submit">Calcular</button>
+                </form>
+                <div id="resultado3"></div>
+            </div>
+            <div id="ejercicio4" class="ejercicio-form">
+                <h3>Salario neto</h3>
+                <form id="formEjercicio4">
+                    <label for="horas">Horas trabajadas:</label>
+                    <input type="text" id="horas" name="horas" pattern="([1-9]|1[0-9]|2[0-4])" title="Ingrese un número válido entre 0 y 24">
+                    <label for="tarifa">Tarifa por hora:</label>
+                    <input type="text" id="tarifa" name="tarifa" pattern="[1-9]\d*" title="Ingrese un número válido desde 1">
+                    <label for="tasa">Tasa de impuestos:</label>
+                    <input type="text" id="tasa" name="tasa" pattern="[0-9]+([\.,][0-9]+)?" title="Ingrese un número válido entre 0 y 100">
+                    <button type="submit">Calcular</button>
+                </form>
+                <div id="resultado4"></div>
+            </div>
+            <div id="ejercicio5" class="ejercicio-form" style="display:none;">
+                <h3>Capital final con interés simple</h3>
+                <form id="formEjercicio5">
+                    <label for="capitalInicial">Capital inicial:</label>
+                    <input type="text" id="capitalInicial" name="capitalInicial" pattern="[0-9]+([\.,][0-9]+)?" title="Ingrese un número válido desde 0" min="0" >
+                    <label for="tasaInteres">Tasa de interés:</label>
+                    <input type="text" id="tasaInteres" name="tasaInteres" pattern="[0-9]+([\.,][0-9]+)?" title="Ingrese un número válido entre 0 y 100" min="0" max="100" >
+                    <label for="tiempo">Tiempo:</label>
+                    <input type="text" id="tiempo" name="tiempo" pattern="[0-9]+" title="Ingrese un número válido o entero desde 0" min="0" >
+                    <button type="submit">Calcular</button>
+                </form>
+                <div id="resultado5"></div>
+            </div>
+        </section>
+    </div>
+    <script src="secuencial.js"></script>
+  <footer>
+    <div class="footer-columns">
+        <div style="display: flex;">
+            <div style="flex: 1; padding: 10px;">
+                <div class="info">
+                    <div class="logo1">
+                        <a href="index.html"><img  width="150"></a>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1; padding: 10px;">
+                <div class="email">
+                    <p>Contactos</p>
+                    <a href="ubicacion.html">
+                        <p>Río Coca y Río Paute K8. Riobamba - Ecuador.</p>
+                    </a>
+                    <p><span class="icon">&#x1F4E7;</span> carlitalomas13@gmail.com</p>
+                    <p><span class="icon">&#x260E;</span> +593 998603804 - +593 984876336</p>
+                </div>
+            </div>
+            <div style="flex: 1; padding: 10px;">
+            </div>
+        </div>
+    </div>
+  </footer>
+  </body>
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  project-id="skilful-sphere-456214-j4"
+  agent-id="0b6556e3-406f-4297-a54d-7ec20bbc26d1"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+    chat-title="boot2">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
+</html>

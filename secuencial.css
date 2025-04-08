@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.main-content {
+	width: 95%;
+    margin: 20px auto;
+    display: flex;
+    margin-top:150px;
+}
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+	width: 25%;
+}
+.ejercicios {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1300px; /* Ajuste para ancho máximo */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar contenido horizontalmente */
+    background-color: #ffffff;
+    color: #021025;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para mejorar apariencia */
+}
+
+.ejercicio-form {
+    display: none;
+    text-align: center;
+    width: 100%;
+}
+
+.ejercicios h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.ejercicios p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.ejercicios form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.ejercicios form label {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.ejercicios form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.ejercicios form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    font-size: 20px;
+
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ejercicios form button:hover {
+    background-color: #0056b3;
+}
+
+.ejercicios #resultado1, 
+.ejercicios #resultado2, 
+.ejercicios #resultado3, 
+.ejercicios #resultado4, 
+.ejercicios #resultado5 {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto
+}
+.product {
+	background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    color: #333;
+}
+.product:hover {
+	background-color: #7C2B50;
+    color: #fff;
+    border:5px solid #fff;
+
+}
+.product h3 {
+    margin: 10px;
+    font-size: 16px;
+    flex: 1;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.product img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-left: auto;
+}

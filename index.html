@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LQ</title>
+    <link rel="stylesheet" href="view.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="vista/logo.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <section class="tophead">
+            <header class="header">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html"><img width="80"></a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="ul">
+                            <li><a href="index.html" id="index">Inicio</a></li>
+                            <li><a href="secuencial.html">Secuencial</a></li>
+                            <li><a href="alternativo.html">Alternativo</a></li>
+                            <li><a href="repeticion.html">Repetición</a></li>
+                            <li><a href="otros.html">Otros</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+    </div>
+    <div class="container1">
+        <div class="box" onclick="openModal('htmlModal')">
+            <img src="Vista/html.jpg" alt="HTML">
+        </div>
+        <div class="box" onclick="openModal('cssModal')">
+            <img src="Vista/css.jpg" alt="CSS">
+        </div>
+        <div class="box" onclick="openModal('jsModal')">
+            <img src="Vista/js.jpg" alt="JavaScript">
+        </div>
+    </div>
+    <div id="htmlModal" class="modal">
+        <div class="modal-content1">
+            <span class="close" onclick="closeModal('htmlModal')">&times;</span>
+            <h2>HTML</h2>
+            <p>HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web. Describe la estructura de una página web utilizando una serie de elementos y etiquetas.</p>
+        </div>
+    </div>
+
+    <div id="cssModal" class="modal">
+        <div class="modal-content2">
+            <span class="close" onclick="closeModal('cssModal')">&times;</span>
+            <h2>CSS</h2>
+            <p>CSS (Cascading Style Sheets) se usa para dar estilo a las páginas web. Permite definir el diseño, la apariencia y el formato de un documento HTML.</p>
+        </div>
+    </div>
+
+    <div id="jsModal" class="modal">
+        <div class="modal-content3">
+            <span class="close" onclick="closeModal('jsModal')">&times;</span>
+            <h2>JavaScript</h2>
+            <p>JavaScript es un lenguaje de programación que se utiliza para crear contenido dinámico e interactivo en las páginas web, como juegos, animaciones y formularios interactivos.</p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <footer>
+        <div class="footer-columns">
+            <div style="display: flex;">
+                <div style="flex: 1; padding: 10px;">
+                    <div class="info">
+                        <div class="logo1">
+                            <a href="index.html"><img  width="150"></a>
+                        </div>
+                    </div>
+                </div>
+                <div style="flex: 1; padding: 10px;">
+                    <div class="email">
+                        <p>Contactos</p>
+                        <a href="ubicacion.html">
+                            <p>Río Coca y Río Paute K8. Riobamba - Ecuador.</p>
+                        </a>
+                        <p><span class="icon">&#x1F4E7;</span> carlitalomas13@gmail.com</p>
+                        <p><span class="icon">&#x260E;</span> +593 998603804 - +593 984876336</p>
+                    </div>
+                </div>
+                <div style="flex: 1; padding: 10px;">
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  project-id="skilful-sphere-456214-j4"
+  agent-id="0b6556e3-406f-4297-a54d-7ec20bbc26d1"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+    chat-title="boot2">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LQ</title>
+    <link rel="stylesheet" href="view.css">
+    <link rel="stylesheet" href="secuencial.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="vista/logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <section class="tophead">
+            <header class="header">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html"><img width="80"></a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="ul">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="secuencial.html">Secuencial</a></li>
+                            <li><a href="alternativo.html" id="alternativo">Alternativo</a></li>
+                            <li><a href="repeticion.html">Repetición</a></li>
+                            <li><a href="otros.html">Otros</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+    </div>
+    <div class="main-content">
+        <section class="products-container">
+            <button class="product" type="button" data-ejercicio="ejercicio6">
+                <img src="Vista/alternativo6.jpg" alt="">
+                <div class="product-description">
+                    <h3>Clasificación de notas</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio7">
+                <img src="Vista/alternativo7.jpg" alt="">
+                <div class="product-description">
+                    <h3>Determinar nro es +, par, múltiplo de 5, etc</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio8">
+                <img src="Vista/alternativo8.jpg" alt="">
+                <div class="product-description">
+                    <h3>Calcular raíces de una ecuación cuadrática</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio9">
+                <img src="Vista/alternativo9.jpg" alt="">
+                <div class="product-description">
+                    <h3>Calcular el costo del alquiler de un automóvil</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio10">
+                <img src="Vista/alternativo10.jpg" alt="">
+                <div class="product-description">
+                    <h3>Calcular la edad</h3>
+                </div>
+            </button>
+        </section>
+        <section class="ejercicios">
+            <div id="ejercicio6" class="ejercicio-form" style="display:none;">
+                <h3>Clasificación de notas</h3>
+                <form id="formEjercicio6">
+                    <label for="nota">Nota:</label>
+                    <input type="text" id="nota" name="nota" pattern="[0-9]+([\.,][0-9]+)?" title="Ingrese un número válido entre 0 y 100" required>
+                    <button type="submit">Clasificar</button>
+                </form>
+                <div id="resultado6"></div>
+            </div>
+            <div id="ejercicio7" class="ejercicio-form" style="display:none;">
+                <h3>Clasificar un número</h3>
+                <form id="formEjercicio7">
+                    <label for="numeroClasificar">Número:</label>
+                    <input type="text" id="numeroClasificar" name="numeroClasificar" pattern="-?\b(100|[1-9]?[0-9])\b" title="Ingrese un número válido entre -100 y 100">
+                    <button type="submit">Clasificar</button>
+                </form>
+                <div id="resultado7"></div>
+            </div>
+            <div id="ejercicio8" class="ejercicio-form" style="display:none;">
+                <h3>Calcular raíces reales</h3>
+                <form id="formEjercicio8">
+                    <label for="coefA">Coeficiente a:</label>
+                    <input type="text" id="coefA" name="coefA" pattern="-?\b(100|[1-9]?[0-9])\b" title="Ingrese un número válido entre -100 y 100" min="-100" max="100" >
+                    <label for="coefB">Coeficiente b:</label>
+                    <input type="text" id="coefB" name="coefB" pattern="-?\b(100|[1-9]?[0-9])\b" title="Ingrese un número válido entre -100 y 100" min="-100" max="100" >
+                    <label for="coefC">Coeficiente c:</label>
+                    <input type="text" id="coefC" name="coefC" pattern="-?\b(100|[1-9]?[0-9])\b" title="Ingrese un número válido entre -100 y 100" min="-100" max="100" >
+                    <button type="submit">Calcular</button>
+                </form>
+                <div id="resultado8"></div>
+            </div>
+            <div id="ejercicio9" class="ejercicio-form">
+                <h3>Calcular el costo del alquiler de un automóvil</h3>
+                <form id="formEjercicio9">
+                    <label for="kmRecorridos">Kilómetros recorridos:</label>
+                    <input type="text" id="kmRecorridos" name="kmRecorridos" pattern="^\d{1,6}(\.\d{1,2})?$" title="Ingrese un número válido entre 300 y 300.000">
+                    <button type="submit">Calcular</button>
+                </form>
+                <div id="resultado9"></div>
+            </div>
+            <div id="ejercicio10" class="ejercicio-form">
+                <h3>Calcular la edad</h3>
+                <form id="formEjercicio10">
+                    <label for="diaNacimiento">Día de nacimiento:</label>
+                    <input type="text" id="diaNacimiento" name="diaNacimiento" pattern="([1-9]|[12][0-9]|3[01])" title="Ingrese un número válido entre 1 y 31">
+                    
+                    <label for="mesNacimiento">Mes de nacimiento:</label>
+                    <input type="text" id="mesNacimiento" name="mesNacimiento" pattern="(0?[1-9]|1[0-2])" title="Ingrese un número válido entre 1 y 12">
+                    
+                    <label for="anioNacimiento">Año de nacimiento:</label>
+                    <input type="text" id="anioNacimiento" name="anioNacimiento" pattern="(19[3-9][0-9]|20[01][0-9]|202[0-4])" title="Ingrese un número válido entre 1930 y 2024">
+                    
+                    <button type="submit">Calcular</button>
+                </form>
+                <div id="resultado10"></div>
+            </div>
+            
+            </div>
+        </section>
+    </div>
+    <script src="alternativo.js"></script>
+  <footer>
+    <div class="footer-columns">
+        <div style="display: flex;">
+            <div style="flex: 1; padding: 10px;">
+                <div class="info">
+                    <div class="logo1">
+                        <a href="index.html"><img  width="150"></a>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1; padding: 10px;">
+                <div class="email">
+                    <p>Contactos</p>
+                    <a href="ubicacion.html">
+                        <p>Río Coca y Río Paute K8. Riobamba - Ecuador.</p>
+                    </a>
+                    <p><span class="icon">&#x1F4E7;</span> carlitalomas13@gmail.com</p>
+                    <p><span class="icon">&#x260E;</span> +593 998603804 - +593 984876336</p>
+                </div>
+            </div>
+            <div style="flex: 1; padding: 10px;">
+                
+            </div>
+        </div>
+    </div>
+  </footer>
+  </body>
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  project-id="skilful-sphere-456214-j4"
+  agent-id="0b6556e3-406f-4297-a54d-7ec20bbc26d1"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+    chat-title="boot2">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
+</html>

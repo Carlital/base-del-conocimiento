@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LQ</title>
+    <link rel="stylesheet" href="view.css">
+    <link rel="stylesheet" href="alternativo.css">
+    <link rel="stylesheet" href="secuencial.css">
+    <link rel="stylesheet" href="otros.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="vista/logo.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <section class="tophead">
+            <header class="header">
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="index.html"><img width="80"></a>
+                    </div>
+                    <nav class="nav">
+                        <ul class="ul">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="secuencial.html">Secuencial</a></li>
+                            <li><a href="alternativo.html">Alternativo</a></li>
+                            <li><a href="repeticion.html">Repetición</a></li>
+                            <li><a href="otros.html" id="otros">Otros</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+    </div>
+    <div class="main-content">
+        <section class="products-container">
+            <button class="product" type="button" data-ejercicio="ejercicio15">
+                <img src="Vista/otros15.jpg" alt="">
+                <div class="product-description">
+                    <h3>Interfaz de voz</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio16">
+                <img src="Vista/otros16.jpg" alt="">
+                <div class="product-description">
+                    <h3>Contar frecuencia de letras en una oración</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio17">
+                <img src="Vista/otros17.jpg" alt="">
+                <div class="product-description">
+                    <h3>Ruleta aleatoria</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio18">
+                <img src="Vista/otros18.jpg" alt="">
+                <div class="product-description">
+                    <h3>Transformar a Morse</h3>
+                </div>
+            </button>
+            <button class="product" type="button" data-ejercicio="ejercicio19">
+                <img src="Vista/otros19.jpg" alt="">
+                <div class="product-description">
+                    <h3>Tienda de víveres</h3>
+                </div>
+            </button>
+        </section>
+        <section class="ejercicios">
+            <div id="ejercicio15" class="ejercicio-form" style="display:none;">
+                <h3>Interfaz de voz</h3>
+                <form id="formEjercicio15">
+                    <button type="submit">Iniciar</button>
+                    <br>
+                    <button id="detenerBoton" type="button" style="display:none;">Detener</button>
+                </form>
+                <div id="resultado15"></div>
+            </div>
+            
+            <div id="ejercicio16" class="ejercicio-form" style="display:none;">
+                <h3>Cadenas y frecuencias</h3>
+                <form id="formEjercicio16">
+                    <label for="oracion">Oración:</label>
+                    <input type="text" id="oracion">
+                    <button type="submit">Contar</button>
+                </form>
+                <div id="resultado16"></div>
+            </div>
+            
+            <div id="ejercicio17" class="ejercicio-form">
+                <h3>Ruleta Aleatoria</h3>
+                <div id="ruleta" class="ruleta">
+                    <div id="seccionRuleta">0</div>
+                </div>
+                <button id="girarRuleta" class="btn">¡Girar Ruleta!</button>
+                <div id="desafio" class="resultado"></div>
+                <button id="completarDesafio" class="btn" style="display:none;">Desafío Completado</button>
+                <div id="puntos" class="puntos">Puntos: 0</div>
+            </div>            
+            
+            <div id="ejercicio18" class="ejercicio-form" style="display:none;">
+                <h3>Transformar a Morse</h3>
+                <form id="formEjercicio18">
+                    <label for="cadenaMorse">Cadena:</label>
+                    <input type="text" id="cadenaMorse" pattern="[A-Za-z0-9 ]+" title="Ingrese valores válidos, no acepta caracteres especiales">
+                    <button type="submit">Transformar</button>
+                </form>
+                <div id="resultado18"></div>
+            </div>
+            
+            <div id="ejercicio19" class="ejercicio-form">
+                <h1>Informe de Ventas de Productos</h1>
+                <form id="formProductos">
+                    <h2>Ingrese el Número de Productos en la Tienda</h2>
+                    <label for="productosInput">Número de Productos:</label>
+                    <input type="text" id="productosInput" min="2" max="8" pattern="[2-8]" title="Ingrese un número entero entre 2 y 8">
+                    <button type="submit">Generar Productos</button>
+                </form>
+                
+                <div id="resultados" class="oculto">
+                    <div id="tabla">
+                        <h2>Tabla de Ventas Semanales</h2>
+                        <table id="ventasTabla">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Total Ventas Semanales</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div id="noVendidosContainer">
+                        <h2>Productos No Vendidos el Miércoles</h2>
+                        <p id="noVendidosMiercoles"></p>
+                        <div id="graficosNoVendidosMiercoles" class="grafico-barra"></div>
+                    </div>
+                    
+                    <div id="graf">
+                        <br>
+                        <h3>Ventas Diarias</h3>
+                        <div id="graficoVentasDiarias" class="grafico-barra">
+                            <div id="bar-lunes" class="barra">
+                                <span class="precio"></span>
+                                <span class="dia">Lunes</span>
+                            </div>
+                            <div id="bar-martes" class="barra">
+                                <span class="precio"></span>
+                                <span class="dia">Martes</span>
+                            </div>
+                            <div id="bar-miercoles" class="barra">
+                                <span class="precio"></span>
+                                <span class="dia">Miércoles</span>
+                            </div>
+                            <div id="bar-jueves" class="barra">
+                                <span class="precio"></span>
+                                <span class="dia">Jueves</span>
+                            </div>
+                            <div id="bar-viernes" class="barra">
+                                <span class="precio"></span>
+                                <span class="dia">Viernes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="productoSelect">Seleccionar producto:</label>
+                        <select id="productoSelect"></select>
+                        <div id="graficoProductoSeleccionado"></div>
+                    </div>
+                    
+                    <div id="resultado19"></div>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="otros.js"></script>
+  <footer>
+    <div class="footer-columns">
+        <div style="display: flex;">
+            <div style="flex: 1; padding: 10px;">
+                <div class="info">
+                    <div class="logo1">
+                        <a href="index.html"><img  width="150"></a>
+                    </div>
+                </div>
+            </div>
+            <div style="flex: 1; padding: 10px;">
+                <div class="email">
+                    <p>Contactos</p>
+                    <a href="ubicacion.html">
+                        <p>Río Coca y Río Paute K8. Riobamba - Ecuador.</p>
+                    </a>
+                    <p><span class="icon">&#x1F4E7;</span> carlitalomas13@gmail.com</p>
+                    <p><span class="icon">&#x260E;</span> +593 998603804 - +593 984876336</p>
+                </div>
+            </div>
+            <div style="flex: 1; padding: 10px;">
+                
+            </div>
+        </div>
+    </div>
+  </footer>
+  </body>
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  project-id="skilful-sphere-456214-j4"
+  agent-id="0b6556e3-406f-4297-a54d-7ec20bbc26d1"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+    chat-title="boot2">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
+</html>
